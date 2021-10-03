@@ -1,4 +1,5 @@
 import java.io.*;
+import java.net.InetAddress;
 import java.net.Socket;
 
 /**
@@ -12,13 +13,15 @@ public class Client {
      * resource link: https://www.cnblogs.com/lichenwei/p/4069432.html
      * @throws IOException msg
      */
-    public void clientDemo() throws IOException {
-        Socket clientSocket = new Socket("LocalHost", 5000);
+    public void clientDemo(String ip, int port) throws IOException {
+        Socket clientSocket = new Socket(ip, port); // use the server host
+
+        //Socket clientSocket = new Socket("localhost", 5000);  //use local host
 
         //get the outStream sent to server
         OutputStream out=clientSocket.getOutputStream();
         PrintWriter writer=new PrintWriter(out);
-        writer.print("Hello Server, what's the best quote today! (from client)");
+        //writer.print("Hello Server, what's the best quote today! (from client)");
         writer.flush();
         clientSocket.shutdownOutput();
 
@@ -45,7 +48,8 @@ public class Client {
 
         while((msg = bufReader.readLine())!=null){
             quote.append(msg);
-            System.out.println("Client receives from server：" + quote);
+            System.out.println(quote);
+
         }
 
         bufReader.close();
@@ -53,7 +57,9 @@ public class Client {
     }
 
     public static void main(String[] args) throws IOException {
-        new Client().clientDemo();
+        for (int i = 0; i<60; i++) {
+            new Client().clientDemo(args[0], Integer.parseInt(args[1]));
+        }
     }
 }
 
