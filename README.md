@@ -7,4 +7,4 @@ With a TCP server socket at port 5000
 ## Client: 
 It contacts the server and output the response which is sent by the server.
 
-![image](https://user-images.githubusercontent.com/76859781/135778168-6d1454b0-e22b-4b2e-ab89-5f85480d4051.png)
+![image](https://user-images.githubusercontent.com/76859781/135778224-04513c52-58c8-4aab-a3d9-7e0d9f8a5e60.png)
