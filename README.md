@@ -5,6 +5,6 @@ With a TCP server socket at port 5000
 - Use threads to handle TCP server sockets
 
 ## Client: 
-It ontacts the server and output the response which is sent by the server.
+It contacts the server and output the response which is sent by the server.
 
 ![image](https://user-images.githubusercontent.com/76859781/135778168-6d1454b0-e22b-4b2e-ab89-5f85480d4051.png)
