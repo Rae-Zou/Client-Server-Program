@@ -1,4 +1,9 @@
 # Client-Server program in Java
+
+Host receives IP datagrams, which contains source IP and destination IP address of the datagram and a transport-layer segment, which has the source port number and destination port number.
+
+Host uses these IP address & port numbers to direct segment to the corresponding socket. The segment’s data then passes through the socket into the attached process.
+
 ## Server: 
 With a TCP server socket at port 5000
 - It loops forever until the server receives a connection request from a client.
