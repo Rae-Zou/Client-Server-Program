@@ -5,7 +5,7 @@ Host receives IP datagrams, which contains source IP and destination IP address 
 Host uses these IP address & port numbers to direct segment to the corresponding socket. The segment’s data then passes through the socket into the attached process.
 
 ## Server: 
-With a TCP server socket at port 5000
+With a `TCP` server socket at port `5000`
 - It loops forever until the server receives a connection request from a client.
 - Use threads to handle TCP server sockets
 
